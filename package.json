@@ -1,5 +1,5 @@
 {
-  "name": "@Canner/le-challenge-s3",
+  "name": "@canner/le-challenge-s3",
   "version": "1.0.1",
   "description": "A S3 strategy for node-letsencrypt and lambda function for handling challenges",
   "main": "lib/index.js",
