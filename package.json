@@ -1,20 +1,23 @@
 {
-  "name": "le-challenge-s3",
+  "name": "@Canner/le-challenge-s3",
   "version": "1.0.1",
   "description": "A S3 strategy for node-letsencrypt and lambda function for handling challenges",
   "main": "lib/index.js",
-  "author": "Maythee Anegboonlap <null@llun.me>",
+  "author": "wwwy3y3 <wwwy3y3@gmail.com>, Maythee Anegboonlap <null@llun.me>",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.54.0"
+    "aws-sdk": "^2.104.0"
   },
+  "files": [
+    "lib"
+  ],
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/llun/le-challenge-s3.git"
+    "url": "git+https://github.com/Canner/le-challenge-s3.git"
   },
   "keywords": [
     "node-greenlock",
@@ -23,7 +26,7 @@
     "aws"
   ],
   "bugs": {
-    "url": "https://github.com/llun/le-challenge-s3/issues"
+    "url": "https://github.com/Canner/le-challenge-s3/issues"
   },
-  "homepage": "https://github.com/llun/le-challenge-s3#readme"
+  "homepage": "https://github.com/Canner/le-challenge-s3#readme"
 }
