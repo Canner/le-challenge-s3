@@ -1,6 +1,11 @@
 # le-challenge-s3
 
-Use S3 for storing challenge key from ACME and serve it via AWS Lambda
+Use S3 for storing challenge key from ACME and serve it in canner hosting
+
+## install
+``` sh
+$ npm install @canner/le-challenge-s3
+```
 
 ## Using
 
@@ -38,60 +43,6 @@ or invoke lambda function with below event
   "domain": "awesome.domain"
 }
 ```
-
-## Lambda function setup
-
-Use [apex](apex.run) to deploy all functions `apex deploy` and setup API Gateway with below schema
-
-```yaml
----
-swagger: "2.0"
-info:
-  version: "2017-05-21T13:41:32Z"
-  title: "Letsencrypt"
-basePath: "/live"
-schemes:
-- "https"
-paths:
-  /{acme+}:
-    get:
-      produces:
-      - "application/json"
-      parameters:
-      - name: "acme"
-        in: "path"
-        required: true
-        type: "string"
-      responses:
-        200:
-          description: "200 response"
-          schema:
-            $ref: "#/definitions/Empty"
-    options:
-      consumes:
-      - "application/json"
-      produces:
-      - "application/json"
-      responses:
-        200:
-          description: "200 response"
-          schema:
-            $ref: "#/definitions/Empty"
-          headers:
-            Access-Control-Allow-Origin:
-              type: "string"
-            Access-Control-Allow-Methods:
-              type: "string"
-            Access-Control-Allow-Headers:
-              type: "string"
-definitions:
-  Empty:
-    type: "object"
-    title: "Empty Schema"
-
-```
-
-And point your domain to this API Gateway. My setup is using Cloudflare with redirect rule to redirect to this url.
 
 ## License
 
